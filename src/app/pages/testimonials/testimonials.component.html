@@ -1,0 +1,20 @@
+<div class="testimonials-container">
+  <mat-card *ngFor="let testimonial of testimonials" class="testimonial-card">
+    <mat-card-header>
+      <div class="customer-info">
+        <img [src]="testimonial.image" alt="Customer Image" class="customer-img" />
+        <div>
+          <h3 class="customer-name">{{ testimonial.name }}</h3>
+          <div class="rating">
+            <mat-icon *ngFor="let star of getStarArray(testimonial.rating).fullStars" class="star full">star</mat-icon>
+            <mat-icon *ngFor="let star of getStarArray(testimonial.rating).halfStars" class="star half">star_half</mat-icon>
+            <mat-icon *ngFor="let star of getStarArray(testimonial.rating).emptyStars" class="star empty">star_outline</mat-icon>
+          </div>
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="customer-feedback">"{{ testimonial.feedback }}"</p>
+    </mat-card-content>
+  </mat-card>
+</div>

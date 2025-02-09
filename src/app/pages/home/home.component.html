@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Welcome To Rooftop Waterproofing</h1>
+  <p>Your trusted solution for waterproofing services.</p>
+</div>
+
+<div class="container">
+  <h2>Our Services</h2>
+  <ul class="services-list">
+    <li (click)="showServiceDetails('rooftop')">Rooftop Waterproofing</li>
+    <li (click)="showServiceDetails('wall')">Wall Waterproofing</li>
+    <li (click)="showServiceDetails('basement')">Basement Waterproofing</li>
+    <li (click)="showServiceDetails('leakage')">Leakage Repair</li>
+  </ul>
+
+  <!-- Cards for service details -->
+  <div class="text-start">
+    <div *ngIf="selectedService" class="card">
+      <h3>{{ serviceDetails[selectedService].title }}</h3>
+      <h5>Description:</h5>
+      <p class="text-black">{{ serviceDetails[selectedService].description }}</p>
+      <h5>Services Include:</h5>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let item of serviceDetails[selectedService].services" role="listitem">
+          &#8226; {{ item }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

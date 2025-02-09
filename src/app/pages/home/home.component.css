@@ -1,0 +1,14 @@
+/* Change color of h1 and p tags */
+h1 {
+    color: white;
+  }
+  
+  /* Styles for the card that will show service details */
+  .card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

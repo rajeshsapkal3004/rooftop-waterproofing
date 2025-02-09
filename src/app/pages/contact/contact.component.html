@@ -1,0 +1,45 @@
+<div class="contact-container">
+    <mat-card class="contact-card">
+      <mat-card-header>
+        <mat-card-title class="text-start">Contact Us</mat-card-title>
+        <mat-card-subtitle>We’d love to hear from you!</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <div class="contact-details">
+          <p><mat-icon>location_on</mat-icon> {{ contactInfo.address }}</p>
+          <p><mat-icon>phone</mat-icon> {{ contactInfo.phone }}</p>
+          <p><mat-icon>email</mat-icon> {{ contactInfo.email }}</p>
+          <p><mat-icon>schedule</mat-icon> {{ contactInfo.hours }}</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card class="form-card">
+      <mat-card-header>
+        <mat-card-title>Send Us a Message</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <form>
+          <mat-form-field class="full-width">
+            <mat-label>Your Name</mat-label>
+            <input matInput type="text" required>
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <mat-label>Your Email</mat-label>
+            <input matInput type="email" required>
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <mat-label>Your Message</mat-label>
+            <textarea matInput rows="4" required></textarea>
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" class="submit-btn">Send Message</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

@@ -1,12 +1,12 @@
 <nav class="navbar">
   <h1>Shivam Terrace Solutions</h1>
   <div class="nav-links" [ngClass]="{ 'active': isMobileMenuOpen }">
-    <button routerLink="/home">Home</button>
-    <button routerLink="/services">Services</button>
-    <button routerLink="/pricing">Pricing</button>
-    <button routerLink="/testimonials">Testimonials</button>
-    <button routerLink="/gallery">Gallery</button>
-    <button routerLink="/contact">Contact</button>
+    <button routerLink="/home" (click)="toggleMobileMenu()">Home</button>
+    <button routerLink="/services" (click)="toggleMobileMenu()">Services</button>
+    <button routerLink="/pricing" (click)="toggleMobileMenu()">Pricing</button>
+    <button routerLink="/testimonials" (click)="toggleMobileMenu()">Testimonials</button>
+    <button routerLink="/gallery" (click)="toggleMobileMenu()">Gallery</button>
+    <button routerLink="/contact" (click)="toggleMobileMenu()">Contact</button>
   </div>
   <button class="hamburger" (click)="toggleMobileMenu()">&#9776;</button>
 </nav>
